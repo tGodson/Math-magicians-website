@@ -1,11 +1,10 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
+import '../styles/css/Display.css';
 import PropTypes from 'prop-types';
-import './style.css';
 
 const Display = ({ result }) => (
-  <div className="display">
-    <h6>{result}</h6>
+  <div id="display">
+    <p>{result}</p>
   </div>
 );
 

@@ -1,28 +1,30 @@
 import Big from 'big.js';
 
-const operate = (numberOne, numberTwo, operation) => {
-  const firstNumber = Big(numberOne);
-  const secondNumber = Big(numberTwo);
-  let result;
-  if (operation === '+') {
-    result = firstNumber.plus(secondNumber).toString();
-  }
-  if (operation === '-') {
-    result = firstNumber.minus(secondNumber).toString();
-  }
-  if (operation === 'x') {
-    result = firstNumber.times(secondNumber).toString();
-  }
-
-  if (operation === '÷' && secondNumber !== '0') {
-    // eslint-disable-next-line eqeqeq
-    if (secondNumber == 0) {
-      result = NaN;
-    } else {
-      result = firstNumber.div(secondNumber).toString();
+const operations = (() => {
+  const operate = (numberOne, numberTwo, operation) => {
+    if (operation === '+') {
+      return Big(numberOne).plus(Big(numberTwo));
     }
-  }
-  return result;
-};
+    if (operation === '-') {
+      return Big(numberOne).minus(Big(numberTwo));
+    }
+    if (operation === '÷') {
+      if (numberTwo !== '0') {
+        return Big(numberOne).div(Big(numberTwo));
+      }
 
-export default operate;
+      return '∞';
+    }
+    if (operation === 'x') {
+      return Big(numberOne).times(Big(numberTwo));
+    }
+    if (numberOne === null) {
+      return Big(numberTwo).times(0.01);
+    }
+    return Big(numberOne).times(Big(numberTwo).times(0.01));
+  };
+
+  return { operate };
+})();
+
+export default operations;

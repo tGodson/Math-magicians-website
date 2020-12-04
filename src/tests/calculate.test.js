@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import Big from 'big.js';
-import calculations from './logic/calculate';
+import calculations from '../logic/calculate';
 
 test('AC button', () => {
   const calculator = { total: '1', next: '5', operation: '+' };
