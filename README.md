@@ -1,6 +1,9 @@
 # Math-magicians-website
 
 This project is based on building a website which has a Home page which has some text, a calculator page which has a calculator we use to make mathematical calculations and a quotes page which contains a quote.
+## Screenshot
+
+![screenshot](app_screenshot.png)
 
 # Project Specification
 

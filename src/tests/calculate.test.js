@@ -12,6 +12,11 @@ test('= button', () => {
   expect(calculations.calculate(calculator, '=')).to.eql({ total: Big(6), next: null, operation: null });
 });
 
+test('operation symbol button', () => {
+  const calculator = { total: '9', next: null, operation: '%' };
+  expect(calculations.calculate(calculator, '%')).to.eql({ total: Big(0.09), next: null, operation: null });
+});
+
 test('operation with full calculator object', () => {
   const calculator = { total: '1', next: '5', operation: '+' };
   expect(calculations.calculate(calculator, '+')).to.eql({ total: Big(6), next: null, operation: '+' });
