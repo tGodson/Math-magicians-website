@@ -8,7 +8,7 @@ import Header from "./components/Header";
 const Routes = () => {
   return (
     <BrowserRouter>
-    <div>
+    <>
       <Header />
       <hr />
       <Switch>
@@ -16,7 +16,7 @@ const Routes = () => {
         <Route exact path="/calculator" component={App} />
         <Route exact path="/quote" component={Quote} />
       </Switch>
-    </div>
+    </>
     </BrowserRouter>
   );
 };
