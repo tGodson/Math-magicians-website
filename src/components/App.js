@@ -1,9 +1,8 @@
-/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
-import './App.css';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
-import calculate from '../logic/calculate';
+import '../styles/css/App.css';
+import calculations from '../logic/calculate';
 
 class App extends Component {
   constructor(props) {
@@ -14,24 +13,25 @@ class App extends Component {
       operation: null,
     };
     this.handleClick = this.handleClick.bind(this);
+    this.strResult = this.strResult.bind(this);
   }
 
   handleClick(buttonName) {
-    /* eslint-disable-next-line react/no-access-state-in-setstate */
-    this.setState(calculate(this.state, buttonName));
+    const calculator = calculations.calculate(this.state, buttonName);
+    this.setState(calculator);
+  }
+
+  strResult() {
+    const { total, next, operation } = this.state;
+    const result = `${total}${operation}${next}`.replace(/null/g, '');
+    return result === '' ? undefined : result;
   }
 
   render() {
-    const { next, total } = this.state;
-    const result = total || next || '0';
-
     return (
-      <div className="App">
-        <div className="container">
-          <h1 className="title">React Calculator</h1>
-          <Display result={result} />
-          <ButtonPanel clickHandler={this.handleClick} />
-        </div>
+      <div id="parent-div">
+        <Display result={this.strResult()} />
+        <ButtonPanel handleClick={this.handleClick} />
       </div>
     );
   }

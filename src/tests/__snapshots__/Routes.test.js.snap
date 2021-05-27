@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <nav>
+    <a
+      aria-current="page"
+      className="navlink active"
+      href="/"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      Home
+    </a>
+    <a
+      aria-current={null}
+      className="navlink"
+      href="/calculator"
+      onClick={[Function]}
+    >
+      Calculator
+    </a>
+    <a
+      aria-current={null}
+      className="navlink"
+      href="/quote"
+      onClick={[Function]}
+    >
+      Quote
+    </a>
+  </nav>
+  <hr />
+  <div>
+    <h1>
+      Math Magician
+    </h1>
+    <h2>
+      Welcome to out Page!
+    </h2>
+    <p>
+      Hello, we are glad to introduce you to the Math Magician website. on this website, you can navigate to the calculatore page or to the quote page
+    </p>
+    <p>
+      Have fun and thank you for comming!
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders correctly 2`] = `
+<div>
+  <nav>
+    <a
+      aria-current="page"
+      className="navlink active"
+      href="/"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      Home
+    </a>
+    <a
+      aria-current={null}
+      className="navlink"
+      href="/calculator"
+      onClick={[Function]}
+    >
+      Calculator
+    </a>
+    <a
+      aria-current={null}
+      className="navlink"
+      href="/quote"
+      onClick={[Function]}
+    >
+      Quote
+    </a>
+  </nav>
+  <hr />
+  <div>
+    <h1>
+      Math Magician
+    </h1>
+    <h2>
+      Welcome to out Page!
+    </h2>
+    <p>
+      Hello, we are glad to introduce you to the Math Magician website. on this website, you can navigate to the calculatore page or to the quote page
+    </p>
+    <p>
+      Have fun and thank you for comming!
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders correctly 3`] = `
+<div>
+  <nav>
+    <a
+      aria-current="page"
+      className="navlink active"
+      href="/"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      Home
+    </a>
+    <a
+      aria-current={null}
+      className="navlink"
+      href="/calculator"
+      onClick={[Function]}
+    >
+      Calculator
+    </a>
+    <a
+      aria-current={null}
+      className="navlink"
+      href="/quote"
+      onClick={[Function]}
+    >
+      Quote
+    </a>
+  </nav>
+  <hr />
+  <div>
+    <h1>
+      Math Magician
+    </h1>
+    <h2>
+      Welcome to out Page!
+    </h2>
+    <p>
+      Hello, we are glad to introduce you to the Math Magician website. on this website, you can navigate to the calculatore page or to the quote page
+    </p>
+    <p>
+      Have fun and thank you for comming!
+    </p>
+  </div>
+</div>
+`;
